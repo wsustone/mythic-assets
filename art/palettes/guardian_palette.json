@@ -1,0 +1,52 @@
+{
+  "core": {
+    "night": "#0f172a",
+    "panel": "#111827",
+    "panelAlt": "#1f2640",
+    "border": "#1f2937",
+    "textPrimary": "#f3f4f6",
+    "textSecondary": "#9ca3af",
+    "accent": "#a78bfa"
+  },
+  "guardians": {
+    "wolf": {
+      "id": "wolf",
+      "name": "Wolf Sentinel",
+      "primary": "#34d399",
+      "secondary": "#065f46",
+      "background": "#042f2e"
+    },
+    "owl": {
+      "id": "owl",
+      "name": "Owl Seer",
+      "primary": "#a78bfa",
+      "secondary": "#4c1d95",
+      "background": "#1e1b4b"
+    },
+    "stag": {
+      "id": "stag",
+      "name": "Stag Warden",
+      "primary": "#86efac",
+      "secondary": "#166534",
+      "background": "#063222"
+    },
+    "serpent": {
+      "id": "serpent",
+      "name": "Serpent Oracle",
+      "primary": "#22d3ee",
+      "secondary": "#0e7490",
+      "background": "#04212a"
+    },
+    "bear": {
+      "id": "bear",
+      "name": "Bear Bastion",
+      "primary": "#c4b5fd",
+      "secondary": "#4c1d95",
+      "background": "#140b24"
+    }
+  },
+  "heroBanner": {
+    "gradient": ["#111827", "#1f2937", "#0f172a"],
+    "glow": "#34d399"
+  }
+}
