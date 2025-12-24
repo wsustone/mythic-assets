@@ -1,0 +1,21 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="wolfGlow" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0%" stop-color="#A7F3D0" />
+      <stop offset="70%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#065F46" />
+    </radialGradient>
+    <linearGradient id="wolfEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ECFCCB" />
+      <stop offset="100%" stop-color="#4ADE80" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="32" fill="#0F172A" />
+  <circle cx="160" cy="150" r="110" fill="url(#wolfGlow)" opacity="0.75" />
+  <path d="M70 210 C120 170 110 120 150 90 L160 110 L170 90 C210 120 200 170 250 210 L205 215 L160 185 L115 215 Z" fill="url(#wolfEdge)" stroke="#F0FDFA" stroke-width="6" stroke-linejoin="round" />
+  <path d="M120 140 C135 130 150 135 160 150" stroke="#134E4A" stroke-width="6" stroke-linecap="round" />
+  <path d="M200 140 C185 130 170 135 160 150" stroke="#134E4A" stroke-width="6" stroke-linecap="round" />
+  <circle cx="138" cy="165" r="8" fill="#0F172A" />
+  <circle cx="182" cy="165" r="8" fill="#0F172A" />
+  <path d="M150 195 Q160 205 170 195" stroke="#065F46" stroke-width="5" stroke-linecap="round" />
+</svg>
