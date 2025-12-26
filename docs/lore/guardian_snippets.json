@@ -1,0 +1,27 @@
+{
+  "wolf": {
+    "title": "Moonlit Vanguard",
+    "lore": "A sentinel born of moonshard stone who stalks the Sanctum’s ridge lines and hunts nightmares before they ever reach the gates.",
+    "resonance": "Moon Hunt with Owl reveals hidden creeps; Fang Current with Serpent lets arrows inherit poison marks."
+  },
+  "owl": {
+    "title": "Chronal Watcher",
+    "lore": "An astral seer that suspends time itself, weaving stasis halos over the Dreamstream to slow anything that trespasses.",
+    "resonance": "Pairs with Wolf to expose stealth attacks and with Stag to seed healing pulses after stasis detonations."
+  },
+  "stag": {
+    "title": "Grove Warden",
+    "lore": "Keeper of Verdant Pulse, its roots anchor blessings to the path and keep every guardian within the aura standing tall.",
+    "resonance": "Bulwark Bloom with Bear turns aura links into fortified conduit vines."
+  },
+  "serpent": {
+    "title": "Oracle of Tides",
+    "lore": "Channels venomed torrents that etch decay into nightmares, marking the path with toxic wakes for allies to exploit.",
+    "resonance": "Fang Current with Wolf lets chain shots carry venom stacks down the line."
+  },
+  "bear": {
+    "title": "Obsidian Bastion",
+    "lore": "A towering bulwark that drags spirit walls from the earth, daring nightmares to break themselves upon its shield.",
+    "resonance": "Obsidian Torrent with Serpent floods taunt walls with corrosive mist while Bulwark Bloom keeps the lane fortified."
+  }
+}
