@@ -4,13 +4,13 @@ Reference profiles for the five core guardians currently implemented across clie
 
 ## Summary Table
 
-| Guardian | Role | Signature Ability | Tier Footprints (T1/T2/T3) | Visual Motif |
+| Guardian | Role | Signature Ability | Synergy Morph (Partner) | Visual Motif |
 | --- | --- | --- | --- | --- |
-| Wolf Sentinel | Multi-hit DPS | **Moonshard Volley** – chained arrows that mark targets | 1×1 → 2×2 → 3×2 forward bite | Moonlit stone wolf |
-| Owl Seer | Area control | **Stasis Lumen** – charge-up orb that slows and detonates | 1×1 → 2×2 → 3×3 halo | Floating owl totem |
-| Stag Warden | Support aura | **Verdant Pulse** – buffs atk speed + armor | 1×1 → 2×2 → Cross aura | Antlered shrine with roots |
-| Serpent Oracle | DoT beam | **Venom Torrent** – stacking decay beam | 1×1 → 1×2 → 1×3 w/ tendrils | Coiled serpent pillar |
-| Bear Bastion | Tank / blocker | **Obsidian Guard** – spirit wall + taunt | 1×1 → 2×1 → 2×3 shield | Obsidian bear statue |
+| Wolf Sentinel | Multi-hit DPS | **Moonshard Volley** – chained arrows that mark targets | Dire Howl (with Serpent) or Skymark Volley (with Owl) | Moonlit stone wolf |
+| Owl Seer | Area control | **Stasis Lumen** – charge-up orb that slows and detonates | Time Grove (with Stag) or Skymark Volley (with Wolf) | Floating owl totem |
+| Stag Warden | Support aura | **Verdant Pulse** – buffs atk speed + armor | Time Grove (with Owl) or Bulwark Bloom (with Bear) | Antlered shrine with roots |
+| Serpent Oracle | DoT beam | **Venom Torrent** – stacking decay beam | Dire Howl (with Wolf) or Obsidian Torrent (with Bear) | Coiled serpent pillar |
+| Bear Bastion | Tank / blocker | **Obsidian Guard** – spirit wall + taunt | Obsidian Torrent (with Serpent) or Bulwark Bloom (with Stag) | Obsidian bear statue |
 
 ## Upgrade Paths
 
@@ -50,6 +50,6 @@ Reference profiles for the five core guardians currently implemented across clie
 
 ## Implementation Notes
 
-- Archetype data should live in a shared `GuardianArchetype` config (name, footprint per tier, ability stats, resonance tags).
+- Archetype data should live in a shared `GuardianArchetype` config (name, ability stats, resonance tags, synergy morph payloads).
 - Combat systems should reference archetype stats instead of emotion strings; this keeps theming aligned with Mythic Guardian lore.
-- When exporting art/animation, include footprint guides in the SVG to help level designers plan space reservations.
+- When exporting art/animation, include morph-ready elements (FX anchors, attach points) so combo forms stay consistent across clients.

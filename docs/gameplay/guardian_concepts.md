@@ -61,27 +61,28 @@ These blessings consume Dreamlight and occupy limited path nodes, encouraging st
 3. `App.createTower` enforces clarity cost (50), emotion-current cost (10), and grid occupancy via `gridSystem`. Successful placements record the `shapeId`, stamp a center position derived from `GRID_SIZE`, and initialize Dreamlight stats at zero (@App.tsx#197-302).
 4. Walls use a parallel flow but fixed circular collision checks; towers and walls currently share the same clarity pool, aligning with “Clarity” from the design doc but without lore naming in UI yet.
 
-### Tiered Footprint Progression (Proposed Replacement for Polyomino Shapes)
-- **Philosophy**: Every guardian begins as a single-cell statue so early placement is painless, but evolving them increases their footprint. Players must reserve adjacent cells if they hope to reach Tier 3, creating meaningful layout planning without needing the Tetris-like shape picker.
-- **Footprint Rules**:
-  | Guardian | Tier 1 Footprint | Tier 2 Footprint | Tier 3 Footprint Concept |
+### Synergy Morph System (Replaces Footprint Growth)
+- **Philosophy**: Guardians now keep their compact single-cell footprint across all tiers, keeping placement readable while still rewarding mastery through **synergy morphs**. When two compatible guardians fight side-by-side and the related Nightmare recipe is unlocked, they can temporarily or permanently fuse into a combo form (e.g., Wolf + Serpent → Dire Howl).
+- **Morph Rules**:
+  | Synergy Pair | Unlock | Morph Trigger | Result |
   | --- | --- | --- | --- |
-  | Wolf Sentinel | 1×1 | 2×2 centered on original cell | 3×2 rectangle projecting toward enemy path (forward bite) |
-  | Owl Seer | 1×1 | 2×2 | 3×3 halo (needs space all around to spin up stasis field) |
-  | Stag Warden | 1×1 | 2×2 | “Cross” aura: original cell plus one cell N/E/S/W for aura roots |
-  | Serpent Oracle | 1×1 | 1×2 (extends forward) | 1×3 beam lane with optional side tendrils (2×3) |
-  | Bear Bastion | 1×1 | 2×1 (bulk backward) | 2×3 block shielding the rear, hinting at wall creation |
+  | Wolf + Serpent | Nightmare of Dread | Both built, adjacency bonus active, player spends Dreamlight | Wolf statue transforms into Dire Howl totem; Serpent becomes an empowering channel |
+  | Owl + Stag | Nightmare of Stagnation | Synergy active + Dreamlight spend | Tower duo merges into Time Grove, emitting shared aura/slow |
+  | Bear + Serpent | Nightmare of Ruin | Bear linked with Serpent | Bear summons Obsidian Torrent wall while Serpent injects decay |
+  | Wolf + Owl | Nightmare of Discord | Linked volley towers | Skymark Volley adds time mines + vision reveal |
+  | Stag + Bear | Nightmare of Hunger | Aura + tank adjacency | Bulwark Bloom extends buffs down the path |
 
-- **Upgrade UX Notes**:
-  - Hovering an upgrade button shows ghosted outlines for future tiers so players can keep buffer tiles clear.
-  - If adjacent cells are occupied, evolution UI highlights the blocking structures and offers “relocate” guidance instead of failing silently.
-  - Grid system reserves pending cells once an upgrade is queued so two simultaneous upgrades can’t collide.
+- **Gameplay Flow**:
+  1. Build the two guardians within resonance range to enable the base synergy bonus.
+  2. Defeat the associated Nightmare to unlock the morph recipe.
+  3. Spend the required Dreamlight (and Clarity if noted) to morph one or both towers into the combo state. The morph keeps the original grid footprint but swaps visuals, stats, and FX per recipe.
+  4. If either guardian is destroyed, the combo breaks and Dreamlight must be re-spent.
 
 - **Implementation Checklist**:
-  1. Replace `TowerShapeSelector` with an “Evolution Footprint” panel that previews Tier 2/Tier 3 footprints per guardian.
-  2. Update `gridSystem.canPlaceTower` and upgrade logic to use `getFootprint(tier, guardianKind)` instead of `shape.blocks`.
-  3. Teach AI/FX to offset spawn points based on footprint center (large structures still fire from the original anchor).
-  4. Document footprint data inside the upcoming `GuardianArchetype` configs so designers can tweak dimensions without touching layout code.
+  1. Replace `TowerShapeSelector` with a **Synergy & Combos** panel that highlights eligible partner towers and morph costs.
+  2. Update economy/state to track adjacency synergies, unlock progress, and combo states per guardian.
+  3. Wire Dreamlight spending + unlock validation into the upgrade UI so morphing feels like an evolution step, not a new placement rule.
+  4. Document combo payloads (stat overrides, FX prefabs, ability swaps) inside the `GuardianArchetype` configs so all clients consume the same data.
 
 ### Platform Experience & Feature Layering
 - **Device Roles**

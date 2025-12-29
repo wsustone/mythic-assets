@@ -20,7 +20,7 @@ Shared terminology and baseline values for currencies, unlock flow, and pacing. 
 | Serpent Oracle | 80 | Medium beam | Continuous ramp | DoT builds over 3 s; positioning critical. |
 | Bear Bastion | 100 | Short | 10 s wall cooldown | High health anchor; low DPS without combos. |
 
-Combination guardians cost **+40% Clarity** plus **2–3 Dreamlight**; players must defeat at least one Nightmare to evolve hybrids.
+Combination guardians cost **+40% Clarity** plus **2–3 Dreamlight**; players must defeat at least one Nightmare to evolve hybrids via synergy morphs (no footprint expansion).
 
 ## Dreamlight Expenditures
 
